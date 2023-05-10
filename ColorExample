@@ -1,0 +1,29 @@
+import java.awt.Color;
+
+public class ColorExample {
+    public static void main(String[] args) {
+        // Crear un objeto Color utilizando el constructor con los componentes RGB
+        Color myColor1 = new Color(255, 0, 0);
+        System.out.println("Color creado con RGB: " + myColor1);
+
+        // Crear un objeto Color utilizando el constructor con el valor entero
+        Color myColor2 = new Color(0xFF00FF); // equivalente a RGB (255, 0, 255)
+        System.out.println("Color creado con valor entero: " + myColor2);
+
+        // Obtener los componentes RGB de un objeto Color
+        int red = myColor1.getRed();
+        int green = myColor1.getGreen();
+        int blue = myColor1.getBlue();
+        System.out.println("Componentes RGB del primer color: " + red + ", " + green + ", " + blue);
+
+        // Modificar un objeto Color utilizando el método brighter()
+        Color brighterColor = myColor2.brighter();
+        System.out.println("Color original: " + myColor2);
+        System.out.println("Color modificado con brighter(): " + brighterColor);
+
+        // Modificar un objeto Color utilizando el método darker()
+        Color darkerColor = myColor1.darker();
+        System.out.println("Color original: " + myColor1);
+        System.out.println("Color modificado con darker(): " + darkerColor);
+    }
+}
